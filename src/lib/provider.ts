@@ -320,40 +320,28 @@ export default Card;`;
 const Counter = () => {
   const [count, setCount] = useState(0);
 
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
-  const reset = () => {
-    setCount(0);
-  };
-
   return (
-    <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Counter</h2>
-      <div className="text-4xl font-bold mb-6">{count}</div>
-      <div className="flex gap-4">
-        <button 
-          onClick={decrement}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
+    <div className="flex flex-col items-center gap-8 px-14 py-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl border border-slate-700/50">
+      <span className="text-xs font-semibold tracking-widest text-slate-500 uppercase">Counter</span>
+      <div className="text-8xl font-black tabular-nums text-white leading-none">{count}</div>
+      <div className="flex items-center gap-3">
+        <button
+          onClick={() => setCount(c => c - 1)}
+          className="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-700 text-slate-300 text-2xl font-light hover:bg-slate-600 hover:text-white hover:scale-105 active:scale-95 transition-all duration-150"
         >
-          Decrease
+          −
         </button>
-        <button 
-          onClick={reset}
-          className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors"
+        <button
+          onClick={() => setCount(0)}
+          className="px-5 h-12 rounded-xl bg-slate-700/60 text-slate-500 text-xs font-semibold tracking-widest uppercase hover:bg-slate-700 hover:text-slate-300 hover:scale-105 active:scale-95 transition-all duration-150"
         >
           Reset
         </button>
-        <button 
-          onClick={increment}
-          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
+        <button
+          onClick={() => setCount(c => c + 1)}
+          className="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-600 text-white text-2xl font-light hover:bg-indigo-500 hover:scale-105 active:scale-95 transition-all duration-150"
         >
-          Increase
+          +
         </button>
       </div>
     </div>
@@ -413,10 +401,8 @@ export default function App() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
-      <div className="w-full max-w-md">
-        <${componentName} />
-      </div>
+    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-8">
+      <${componentName} />
     </div>
   );
 }`;
