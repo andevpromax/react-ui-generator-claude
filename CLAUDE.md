@@ -89,3 +89,7 @@ Custom JWT auth — no NextAuth. Sessions are 7-day JWTs signed with `JWT_SECRET
 ### Testing
 
 Vitest with jsdom and React Testing Library. Tests live alongside source in `__tests__/` subdirectories. Run with `npm test` or target a single file with `npx vitest run <path>`.
+
+## Claude PR test
+
+This is a test change for Claude GitHub integration.
