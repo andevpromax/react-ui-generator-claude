@@ -92,4 +92,4 @@ Vitest with jsdom and React Testing Library. Tests live alongside source in `__t
 
 ## Claude PR test
 
-This is a test change for Claude GitHub integration.
+Validates the Claude GitHub Actions integration for automated PR review and assistance.
